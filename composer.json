@@ -11,7 +11,10 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "istvanmolitor/menu": "dev-main",
+        "istvanmolitor/admin": "dev-main",
+        "istvanmolitor/user": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -75,6 +78,20 @@
             "dont-discover": []
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./packages/menu"
+        },
+        {
+            "type": "path",
+            "url": "./packages/admin"
+        },
+        {
+            "type": "path",
+            "url": "./packages/user"
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64d4fe56d9192505ee87d96384946a0b",
+    "content-hash": "d2a1db972e6f5bbee72bc0a924e8befb",
     "packages": [
         {
             "name": "brick/math",
@@ -1051,6 +1051,126 @@
                 }
             ],
             "time": "2025-08-22T14:27:06+00:00"
+        },
+        {
+            "name": "istvanmolitor/admin",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/admin",
+                "reference": "8805aeaf5e7dc1e340fbf13d293d2897bed01b3b"
+            },
+            "require": {
+                "istvanmolitor/menu": "dev-main"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Molitor\\Admin\\Providers\\AdminServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Molitor\\Admin\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Molitor István",
+                    "email": "istvanmolitor@gmail.com"
+                }
+            ],
+            "description": "Admin UI for Molitor packages.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "istvanmolitor/menu",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/menu",
+                "reference": "c7ded58aff196d5ee85b202c1fa6c4c90eca7c1b"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.0|^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Molitor\\Menu\\Providers\\MenuServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Molitor\\Menu\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Molitor\\Menu\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Molitor István",
+                    "email": "istvanmolitor@gmail.com"
+                }
+            ],
+            "description": "Menu",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "istvanmolitor/user",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/user",
+                "reference": "afcf90f5d5a9aa6cdfad28a3a3ed40a5cbc27686"
+            },
+            "require": {
+                "istvanmolitor/admin": "dev-main"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Molitor\\User\\Providers\\UserServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Molitor\\User\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Molitor István",
+                    "email": "istvanmolitor@gmail.com"
+                }
+            ],
+            "description": "User",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "laravel/framework",
@@ -8362,12 +8482,16 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "istvanmolitor/admin": 20,
+        "istvanmolitor/menu": 20,
+        "istvanmolitor/user": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

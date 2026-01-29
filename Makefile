@@ -1,4 +1,4 @@
-.PHONY: help install setup dev queue vite npm-build migrate migrate-fresh seed fresh rollback test test-coverage pint format check cache-clear optimize optimize-clear clean clean-all up upd down restart shell sail-install tinker key-generate link
+.PHONY: help install update setup dev queue vite npm-build migrate migrate-fresh seed fresh rollback test test-coverage pint format check cache-clear optimize optimize-clear clean clean-all up upd down restart shell sail-install tinker key-generate link
 
 # Default target
 .DEFAULT_GOAL := help
@@ -11,7 +11,10 @@ help: ## Mutasd a segítséget
 ## Telepítés és beállítás
 install: ## Composer és npm csomagok telepítése
 	./vendor/bin/sail composer install
-	./vendor/bin/sail install
+
+update: ## Composer és npm csomagok frissítése
+	./vendor/bin/sail composer update
+
 
 setup: ## Projekt első indítása (env, key, migrate, build)
 	./vendor/bin/sail composer run-script setup
