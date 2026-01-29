@@ -1,4 +1,4 @@
-.PHONY: help install update setup dev queue vite npm-build migrate migrate-fresh seed fresh rollback test test-coverage pint format check cache-clear optimize optimize-clear clean clean-all up upd down restart shell sail-install tinker key-generate link
+.PHONY: help install update setup dev queue vite npm-build migrate migrate-fresh seed fresh rollback test test-coverage pint format check cache-clear optimize optimize-clear clean clean-all up upd down restart shell sail-install tinker key-generate publish link
 
 # Default target
 .DEFAULT_GOAL := help
@@ -124,6 +124,9 @@ key-generate: ## Új alkalmazás kulcs generálása
 
 link: ## Storage link létrehozása
 	./vendor/bin/sail artisan storage:link
+
+publish: ## Package erőltetett publikálása
+	./vendor/bin/sail artisan vendor:publish --force
 
 clone-packages: ## Csomagok klónozása
 	mkdir -p packages && cd packages && \
