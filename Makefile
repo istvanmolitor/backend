@@ -1,4 +1,4 @@
-.PHONY: help install setup dev test clean migrate seed fresh optimize cache-clear serve queue logs pint format check build up down restart shell
+.PHONY: help install setup dev queue vite npm-build migrate migrate-fresh seed fresh rollback test test-coverage pint format check cache-clear optimize optimize-clear clean clean-all up upd down restart shell sail-install tinker key-generate link
 
 # Default target
 .DEFAULT_GOAL := help
@@ -10,53 +10,47 @@ help: ## Mutasd a segítséget
 
 ## Telepítés és beállítás
 install: ## Composer és npm csomagok telepítése
-	composer install
-	npm install
+	./vendor/bin/sail composer install
+	./vendor/bin/sail install
 
 setup: ## Projekt első indítása (env, key, migrate, build)
-	composer run-script setup
+	./vendor/bin/sail composer run-script setup
 
 ## Fejlesztés
 dev: ## Fejlesztői környezet indítása (server, queue, pail, vite)
-	composer run-script dev
-
-serve: ## Laravel szerver indítása
-	php artisan serve
+	./vendor/bin/sail composer run-script dev
 
 queue: ## Queue worker indítása
-	php artisan queue:work
-
-logs: ## Pail log viewer indítása
-	php artisan pail
+	./vendor/bin/sail artisan queue:work
 
 vite: ## Vite dev server indítása
-	npm run dev
+	./vendor/bin/sail npm run dev
 
-build: ## Frontend assets build
-	npm run build
+npm-build: ## Frontend assets build
+	./vendor/bin/sail npm run build
 
 ## Adatbázis
 migrate: ## Migrációk futtatása
-	php artisan migrate
+	./vendor/bin/sail artisan migrate
 
 migrate-fresh: ## Adatbázis törlése és újra migrálás
-	php artisan migrate:fresh
+	 ./vendor/bin/sail migrate:fresh
 
 seed: ## Seederek futtatása
-	php artisan db:seed
+	./vendor/bin/sail artisan db:seed
 
 fresh: ## Adatbázis törlése, migrálás és seed
-	php artisan migrate:fresh --seed
+	./vendor/bin/sail artisan migrate:fresh --seed
 
 rollback: ## Utolsó migráció visszavonása
-	php artisan migrate:rollback
+	./vendor/bin/sail artisan migrate:rollback
 
 ## Tesztelés
 test: ## PHPUnit tesztek futtatása
-	composer run-script test
+	./vendor/bin/sail composer run-script test
 
 test-coverage: ## Tesztek futtatása coverage-dzsel
-	php artisan test --coverage
+	./vendor/bin/sail artisan test --coverage
 
 ## Kód formázás és minőség
 pint: ## Laravel Pint code formatter futtatása
@@ -69,24 +63,24 @@ check: ## Kód ellenőrzése Pint-tel (dry run)
 
 ## Cache kezelés
 cache-clear: ## Összes cache törlése
-	php artisan cache:clear
-	php artisan config:clear
-	php artisan route:clear
-	php artisan view:clear
+	./vendor/bin/sail artisan cache:clear
+	./vendor/bin/sail artisan config:clear
+	./vendor/bin/sail artisan route:clear
+	./vendor/bin/sail artisan view:clear
 
 optimize: ## Alkalmazás optimalizálása
-	php artisan config:cache
-	php artisan route:cache
-	php artisan view:cache
+	./vendor/bin/sail artisan config:cache
+	./vendor/bin/sail artisan route:cache
+	./vendor/bin/sail artisan view:cache
 
 optimize-clear: cache-clear ## Cache-ek törlése
 
 ## Tisztítás
 clean: ## Temp fájlok és cache-ek törlése
-	php artisan cache:clear
-	php artisan config:clear
-	php artisan route:clear
-	php artisan view:clear
+	./vendor/bin/sail artisan cache:clear
+	./vendor/bin/sail artisan config:clear
+	./vendor/bin/sail artisan route:clear
+	./vendor/bin/sail artisan view:clear
 	rm -rf bootstrap/cache/*.php
 	rm -rf storage/framework/cache/*
 	rm -rf storage/framework/sessions/*
@@ -100,6 +94,10 @@ clean-all: clean ## Minden generált fájl törlése (vendor, node_modules is)
 
 ## Laravel Sail (Docker)
 up: ## Docker konténerek indítása
+	./vendor/bin/sail up
+
+## Laravel Sail (Docker)
+upd: ## Docker konténerek indítása démon módban
 	./vendor/bin/sail up -d
 
 down: ## Docker konténerek leállítása
@@ -112,14 +110,14 @@ shell: ## Bash shell a Docker konténerben
 	./vendor/bin/sail shell
 
 sail-install: ## Sail telepítése
-	php artisan sail:install
+	./vendor/bin/sail artisan sail:install
 
 ## Utility
 tinker: ## Laravel Tinker REPL
-	php artisan tinker
+	./vendor/bin/sail artisan tinker
 
 key-generate: ## Új alkalmazás kulcs generálása
-	php artisan key:generate
+	./vendor/bin/sail artisan key:generate
 
 link: ## Storage link létrehozása
-	php artisan storage:link
+	./vendor/bin/sail artisan storage:link
