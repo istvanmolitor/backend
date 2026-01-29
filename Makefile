@@ -1,4 +1,4 @@
-.PHONY: help install update setup dev queue vite npm-build migrate migrate-fresh seed fresh rollback test test-coverage pint format check cache-clear optimize optimize-clear clean clean-all up upd down restart shell sail-install tinker key-generate publish link
+.PHONY: help install update setup dev queue vite npm-build migrate migrate-fresh seed refresh rollback test test-coverage pint format check cache-clear optimize optimize-clear clean clean-all up upd down restart shell sail-install tinker key-generate publish link
 
 # Default target
 .DEFAULT_GOAL := help
@@ -42,8 +42,8 @@ migrate-fresh: ## Adatbázis törlése és újra migrálás
 seed: ## Seederek futtatása
 	./vendor/bin/sail artisan db:seed
 
-fresh: ## Adatbázis törlése, migrálás és seed
-	./vendor/bin/sail artisan migrate:fresh --seed
+refresh: ## Adatbázis törlése, migrálás és seed
+	./vendor/bin/sail artisan migrate:refresh --seed
 
 rollback: ## Utolsó migráció visszavonása
 	./vendor/bin/sail artisan migrate:rollback
