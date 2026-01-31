@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e678433bbb9d5bdac517e38d9d5753b7",
+    "content-hash": "44810f0f59420939a527af4713118f4d",
     "packages": [
         {
             "name": "brick/math",
@@ -1091,6 +1091,45 @@
             }
         },
         {
+            "name": "istvanmolitor/language",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/language",
+                "reference": "ac731a7b36044652875408edd9227d50e71113fb"
+            },
+            "require": {
+                "istvanmolitor/user": "*@dev"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Molitor\\Language\\Providers\\LanguageServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Molitor\\Language\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Molitor István",
+                    "email": "istvanmolitor@gmail.com"
+                }
+            ],
+            "description": "Language",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "istvanmolitor/menu",
             "version": "dev-main",
             "dist": {
@@ -1140,7 +1179,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/user",
-                "reference": "eb04d05b8e5ad8580e3aac7d7307d7ce266c9bea"
+                "reference": "ad23a298e59bffcc05d4604d7ebc73cec0ac0965"
             },
             "require": {
                 "istvanmolitor/admin": "dev-main",
@@ -8757,6 +8796,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "istvanmolitor/admin": 20,
+        "istvanmolitor/language": 20,
         "istvanmolitor/menu": 20,
         "istvanmolitor/user": 20
     },
@@ -8765,6 +8805,6 @@
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
 }
