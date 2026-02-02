@@ -12,6 +12,7 @@
         "php": "^8.2",
         "darkaonline/l5-swagger": "^10.1",
         "istvanmolitor/admin": "dev-main",
+        "istvanmolitor/cms": "dev-main",
         "istvanmolitor/language": "dev-main",
         "istvanmolitor/menu": "dev-main",
         "istvanmolitor/user": "dev-main",
@@ -86,6 +87,10 @@
         {
             "type": "path",
             "url": "./packages/menu"
+        },
+        {
+            "type": "path",
+            "url": "./packages/cms"
         },
         {
             "type": "path",
