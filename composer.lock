@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10ccaa9c21e5d2b3c3fb87b371d8d43f",
+    "content-hash": "4f708e9516f7041eddfd65c8d02f7035",
     "packages": [
         {
             "name": "brick/math",
@@ -1176,7 +1176,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/cms",
-                "reference": "bc1cc91df1e52e633fbdaa3fc88607cb7b0ce2f9"
+                "reference": "f0b2138cf1ff9b49c3c22909ccdce642337e6adc"
             },
             "require": {
                 "istvanmolitor/language": "*@dev",
@@ -1193,7 +1193,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Molitor\\Cms\\": "src/"
+                    "Molitor\\Cms\\": "src/",
+                    "Molitor\\Cms\\Database\\Seeders\\": "src/database/seeders/"
                 }
             },
             "license": [
@@ -1216,7 +1217,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/language",
-                "reference": "15846fe5ace3f7013cf30f78638f53187518ec4d"
+                "reference": "38b16f00541ed63c2d05690c1957df9dd245ffa8"
             },
             "require": {
                 "istvanmolitor/user": "*@dev"
@@ -1250,12 +1251,50 @@
             }
         },
         {
+            "name": "istvanmolitor/media",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/media",
+                "reference": "574f2e313157a6a1b4a4d6c99032162691853ff6"
+            },
+            "require": {
+                "istvanmolitor/admin": "dev-main"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Molitor\\Media\\Providers\\MediaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Molitor\\Media\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Molitor István",
+                    "email": "istvanmolitor@gmail.com"
+                }
+            ],
+            "description": "Media",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "istvanmolitor/menu",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./packages/menu",
-                "reference": "c7ded58aff196d5ee85b202c1fa6c4c90eca7c1b"
+                "reference": "0a5884ec82a6dc363db77caa3d274ee38d17f049"
             },
             "require-dev": {
                 "phpunit/phpunit": "^10.0|^11.0"
@@ -9261,6 +9300,7 @@
         "istvanmolitor/admin": 20,
         "istvanmolitor/cms": 20,
         "istvanmolitor/language": 20,
+        "istvanmolitor/media": 20,
         "istvanmolitor/menu": 20,
         "istvanmolitor/user": 20
     },

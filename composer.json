@@ -14,6 +14,7 @@
         "istvanmolitor/admin": "dev-main",
         "istvanmolitor/cms": "dev-main",
         "istvanmolitor/language": "dev-main",
+        "istvanmolitor/media": "dev-main",
         "istvanmolitor/menu": "dev-main",
         "istvanmolitor/user": "dev-main",
         "laravel/framework": "^12.0",
@@ -103,6 +104,10 @@
         {
             "type": "path",
             "url": "./packages/language"
+        },
+        {
+            "type": "path",
+            "url": "./packages/media"
         }
     ],
     "config": {
