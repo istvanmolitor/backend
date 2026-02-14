@@ -16,6 +16,7 @@
         "istvanmolitor/language": "dev-main",
         "istvanmolitor/media": "dev-main",
         "istvanmolitor/menu": "dev-main",
+        "istvanmolitor/rss-watcher": "dev-main",
         "istvanmolitor/user": "dev-main",
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.3",
@@ -23,7 +24,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
-        "laravel/boost": "^2.0",
+        "laravel/boost": "^2.1",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.24",
         "laravel/sail": "^1.52",
@@ -108,6 +109,10 @@
         {
             "type": "path",
             "url": "./packages/media"
+        },
+        {
+            "type": "path",
+            "url": "./packages/rss-watcher"
         }
     ],
     "config": {
