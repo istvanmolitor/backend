@@ -5,9 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Molitor\Cms\Database\Seeders\CmsSeeder;
-use Molitor\Language\database\seeders\LanguageSeeder;
+use Molitor\Language\Database\Seeders\LanguageSeeder;
 use Molitor\Media\Database\Seeders\MediaSeeder;
-use Molitor\User\database\seeders\UserSeeder;
+use Molitor\User\Database\Seeders\UserSeeder;
 
 class DatabaseSeeder extends Seeder
 {
