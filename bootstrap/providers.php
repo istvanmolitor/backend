@@ -6,4 +6,6 @@ return [
     Molitor\User\Providers\UserServiceProvider::class,
     Molitor\Menu\Providers\MenuServiceProvider::class,
     Molitor\Admin\Providers\AdminServiceProvider::class,
+    Molitor\Cms\Providers\CmsServiceProvider::class,
+    Molitor\Media\Providers\MediaServiceProvider::class,
 ];
