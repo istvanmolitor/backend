@@ -13,6 +13,7 @@
         "darkaonline/l5-swagger": "^10.1",
         "istvanmolitor/admin": "dev-main",
         "istvanmolitor/article-parser": "dev-main",
+        "istvanmolitor/article-scraper": "dev-main",
         "istvanmolitor/cms": "dev-main",
         "istvanmolitor/html-parser": "dev-main",
         "istvanmolitor/language": "dev-main",
@@ -118,11 +119,15 @@
         },
         {
             "type": "path",
-            "url": "./packages/html-parser"
+            "url": "./packages/article-scraper"
         },
         {
             "type": "path",
             "url": "./packages/article-parser"
+        },
+        {
+            "type": "path",
+            "url": "./packages/html-parser"
         }
     ],
     "config": {
