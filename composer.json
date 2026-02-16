@@ -12,7 +12,9 @@
         "php": "^8.2",
         "darkaonline/l5-swagger": "^10.1",
         "istvanmolitor/admin": "dev-main",
+        "istvanmolitor/article-parser": "dev-main",
         "istvanmolitor/cms": "dev-main",
+        "istvanmolitor/html-parser": "dev-main",
         "istvanmolitor/language": "dev-main",
         "istvanmolitor/media": "dev-main",
         "istvanmolitor/menu": "dev-main",
@@ -113,6 +115,14 @@
         {
             "type": "path",
             "url": "./packages/rss-watcher"
+        },
+        {
+            "type": "path",
+            "url": "./packages/html-parser"
+        },
+        {
+            "type": "path",
+            "url": "./packages/article-parser"
         }
     ],
     "config": {
