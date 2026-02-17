@@ -48,9 +48,30 @@ services:
                 - '-p${DB_PASSWORD}'
             retries: 3
             timeout: 5s
+    elasticsearch:
+        image: 'elasticsearch:8.11.1'
+        ports:
+            - '${FORWARD_ELASTICSEARCH_PORT:-9200}:9200'
+        environment:
+            - 'discovery.type=single-node'
+            - 'xpack.security.enabled=false'
+            - 'ES_JAVA_OPTS=-Xms512m -Xmx512m'
+        volumes:
+            - 'sail-elasticsearch:/usr/share/elasticsearch/data'
+        networks:
+            - sail
+        healthcheck:
+            test:
+                - CMD-SHELL
+                - 'curl -f http://localhost:9200/_cluster/health || exit 1'
+            retries: 3
+            timeout: 5s
+            interval: 10s
 networks:
     sail:
         driver: bridge
 volumes:
     sail-mysql:
+        driver: local
+    sail-elasticsearch:
         driver: local
