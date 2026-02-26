@@ -13,7 +13,6 @@
         "darkaonline/l5-swagger": "^10.1",
         "istvanmolitor/admin": "dev-main",
         "istvanmolitor/cms": "dev-main",
-        "istvanmolitor/html-parser": "dev-main",
         "istvanmolitor/language": "dev-main",
         "istvanmolitor/media": "dev-main",
         "istvanmolitor/menu": "dev-main",
