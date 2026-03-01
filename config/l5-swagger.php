@@ -47,7 +47,6 @@ return [
                     base_path('app'),
                     base_path('packages/language/src'),
                     base_path('packages/admin/src'),
-                    base_path('packages/menu/src'),
                     base_path('packages/user/src'),
                 ],
             ],

@@ -130,6 +130,5 @@ publish: ## Package erőltetett publikálása
 
 clone-packages: ## Csomagok klónozása
 	mkdir -p packages && cd packages && \
-	git clone git@github.com:istvanmolitor/menu.git && \
 	git clone git@github.com:istvanmolitor/admin.git && \
 	git clone git@github.com:istvanmolitor/user.git
