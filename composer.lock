@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "428dd6c965ed154439614ee6a8b6a37e",
+    "content-hash": "5bbc50744aadc3a117189120e5d8cd4d",
     "packages": [
         {
             "name": "brick/math",
@@ -1138,7 +1138,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/admin",
-                "reference": "4fbe64ee0cd908706fc25eb0cd6d554861a0663c"
+                "reference": "469b3c3da8cd5e96b062c3fd54e12dcddae9b9e6"
             },
             "type": "library",
             "extra": {
@@ -1173,7 +1173,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/cms",
-                "reference": "47062433e23f4d0ff7cbd5be1d929a80eaa140d3"
+                "reference": "ef6084290b6c7bf8c6181ef306c0b1a838f848c1"
             },
             "require": {
                 "istvanmolitor/language": "*@dev",
@@ -1214,7 +1214,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/language",
-                "reference": "5e9854e2eab6da74c82bf30b4f5fe3c198483ff7"
+                "reference": "0c3bc49821dca55d2d0f3172d0212750e7ec2646"
             },
             "require": {
                 "istvanmolitor/user": "*@dev"
@@ -1335,7 +1335,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/rss-watcher",
-                "reference": "1667a97a82be19e1434edb9f14c2a5c65105bf80"
+                "reference": "7c0dc3e0ee3e2b8557435cbbfa4b4619fca1c464"
             },
             "require": {
                 "illuminate/support": "^10.0|^11.0|^12.0",
@@ -1364,12 +1364,88 @@
             }
         },
         {
+            "name": "istvanmolitor/setting",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/setting",
+                "reference": "f954e54ba648eb87a6877c79bd7aa54d410278b1"
+            },
+            "require": {
+                "istvanmolitor/user": "*@dev"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Molitor\\Setting\\Providers\\SettingServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Molitor\\Setting\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Molitor István",
+                    "email": "istvanmolitor@gmail.com"
+                }
+            ],
+            "description": "Setting",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "istvanmolitor/theme",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/theme",
+                "reference": "b71faba383aa9e918843e0c7ac5ababe08c70681"
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Molitor\\Theme\\Providers\\ThemeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Molitor\\Theme\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Molitor István",
+                    "email": "istvanmolitor@gmail.com"
+                }
+            ],
+            "description": "Theme package",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "istvanmolitor/user",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./packages/user",
-                "reference": "e4d1457434beac4a9abf4b83e871d9acf2d4d21f"
+                "reference": "180e0311f638592c4e8dd7a2982ed01c817b6782"
             },
             "require": {
                 "istvanmolitor/admin": "dev-main",
@@ -3899,16 +3975,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v5.31.2",
+            "version": "v5.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "a398208d1723ce5dae956cb2a060864092d436c0"
+                "reference": "1b33a5976d8f5e02d3bc40de1deae3a4a3642e36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/a398208d1723ce5dae956cb2a060864092d436c0",
-                "reference": "a398208d1723ce5dae956cb2a060864092d436c0",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/1b33a5976d8f5e02d3bc40de1deae3a4a3642e36",
+                "reference": "1b33a5976d8f5e02d3bc40de1deae3a4a3642e36",
                 "shasum": ""
             },
             "type": "library",
@@ -3954,9 +4030,9 @@
             ],
             "support": {
                 "issues": "https://github.com/swagger-api/swagger-ui/issues",
-                "source": "https://github.com/swagger-api/swagger-ui/tree/v5.31.2"
+                "source": "https://github.com/swagger-api/swagger-ui/tree/v5.32.0"
             },
-            "time": "2026-02-20T10:41:00+00:00"
+            "time": "2026-02-27T11:52:15+00:00"
         },
         {
             "name": "symfony/clock",
@@ -6876,16 +6952,16 @@
         },
         {
             "name": "zircote/swagger-php",
-            "version": "6.0.5",
+            "version": "6.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zircote/swagger-php.git",
-                "reference": "9a0a612584e7dea0e069b3b1a2120b404f3a51d4"
+                "reference": "9447c1f45b5ae93185caea9a0c8e298399188a25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/9a0a612584e7dea0e069b3b1a2120b404f3a51d4",
-                "reference": "9a0a612584e7dea0e069b3b1a2120b404f3a51d4",
+                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/9447c1f45b5ae93185caea9a0c8e298399188a25",
+                "reference": "9447c1f45b5ae93185caea9a0c8e298399188a25",
                 "shasum": ""
             },
             "require": {
@@ -6954,7 +7030,7 @@
             ],
             "support": {
                 "issues": "https://github.com/zircote/swagger-php/issues",
-                "source": "https://github.com/zircote/swagger-php/tree/6.0.5"
+                "source": "https://github.com/zircote/swagger-php/tree/6.0.6"
             },
             "funding": [
                 {
@@ -6962,7 +7038,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-10T20:05:00+00:00"
+            "time": "2026-02-28T06:42:58+00:00"
         }
     ],
     "packages-dev": [
@@ -9473,6 +9549,8 @@
         "istvanmolitor/media": 20,
         "istvanmolitor/menu": 20,
         "istvanmolitor/rss-watcher": 20,
+        "istvanmolitor/setting": 20,
+        "istvanmolitor/theme": 20,
         "istvanmolitor/user": 20
     },
     "prefer-stable": true,
@@ -9481,5 +9559,5 @@
         "php": "^8.2"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
