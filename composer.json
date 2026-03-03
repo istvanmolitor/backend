@@ -14,6 +14,7 @@
         "istvanmolitor/admin": "dev-main",
         "istvanmolitor/menu": "dev-main",
         "istvanmolitor/cms": "dev-main",
+        "istvanmolitor/contact": "dev-main",
         "istvanmolitor/language": "dev-main",
         "istvanmolitor/media": "dev-main",
         "istvanmolitor/rss-watcher": "dev-main",
@@ -123,6 +124,10 @@
         {
             "type": "path",
             "url": "./packages/theme"
+        },
+        {
+            "type": "path",
+            "url": "./packages/contact"
         }
     ],
     "config": {

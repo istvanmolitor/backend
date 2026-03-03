@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bbc50744aadc3a117189120e5d8cd4d",
+    "content-hash": "d0cf53d6230f982acba1b8cc089d8028",
     "packages": [
         {
             "name": "brick/math",
@@ -1173,7 +1173,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/cms",
-                "reference": "ef6084290b6c7bf8c6181ef306c0b1a838f848c1"
+                "reference": "faf7a5e3ddfca4e23799525c14906100ca990c3e"
             },
             "require": {
                 "istvanmolitor/language": "*@dev",
@@ -1204,6 +1204,44 @@
                 }
             ],
             "description": "CMS package for filament 4 applications.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "istvanmolitor/contact",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/contact",
+                "reference": "d9b5e1fcdf1d9c9a99eaa4215066431c9b7c47e3"
+            },
+            "require": {
+                "istvanmolitor/contact": "*@dev"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Molitor\\Contact\\Providers\\ContactServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Molitor\\Contact\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Molitor István",
+                    "email": "istvanmolitor@gmail.com"
+                }
+            ],
+            "description": "Contact package",
             "transport-options": {
                 "relative": true
             }
@@ -1335,7 +1373,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/rss-watcher",
-                "reference": "7c0dc3e0ee3e2b8557435cbbfa4b4619fca1c464"
+                "reference": "ffdc199daa0c2bf230ea36295ac6afbe36f1c287"
             },
             "require": {
                 "illuminate/support": "^10.0|^11.0|^12.0",
@@ -1369,7 +1407,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/setting",
-                "reference": "3de2d7c8d53801fb01d872381add8b970816833d"
+                "reference": "10ad79ee2a8572f53e74bf05176750a9939d074c"
             },
             "require": {
                 "istvanmolitor/user": "*@dev"
@@ -1407,7 +1445,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/theme",
-                "reference": "77d724df7a6b778f978b0feb051772b0d9088351"
+                "reference": "ee08c96a6c0649f582bf1b4b83c3e066f45cc094"
             },
             "require": {
                 "php": "^8.2"
@@ -9544,20 +9582,21 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "istvanmolitor/admin": 20,
+        "istvanmolitor/menu": 20,
         "istvanmolitor/cms": 20,
+        "istvanmolitor/contact": 20,
         "istvanmolitor/language": 20,
         "istvanmolitor/media": 20,
-        "istvanmolitor/menu": 20,
         "istvanmolitor/rss-watcher": 20,
+        "istvanmolitor/user": 20,
         "istvanmolitor/setting": 20,
-        "istvanmolitor/theme": 20,
-        "istvanmolitor/user": 20
+        "istvanmolitor/theme": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
 }
