@@ -1369,7 +1369,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/setting",
-                "reference": "f954e54ba648eb87a6877c79bd7aa54d410278b1"
+                "reference": "3de2d7c8d53801fb01d872381add8b970816833d"
             },
             "require": {
                 "istvanmolitor/user": "*@dev"
@@ -1407,7 +1407,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/theme",
-                "reference": "b71faba383aa9e918843e0c7ac5ababe08c70681"
+                "reference": "77d724df7a6b778f978b0feb051772b0d9088351"
             },
             "require": {
                 "php": "^8.2"
